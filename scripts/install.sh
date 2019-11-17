@@ -1,14 +1,23 @@
-# cd ~/
+echo "Go in the root directory"
+cd ~/
+
+echo "Begin installations. Start with python3, pip3, and virtualenv"
 sudo apt-get install python3-dev python3-pip python3-virtualenv
-pip3 install --upgrade pip setuptools
-pip3 install requests
+sudo pip3 install --upgrade pip setuptools
+
+echo "Now on to the packages required for our backend"
+sudo python3 -m pip install requests
+sudo python3 -m pip install -U python-dotenv
+sudo python3 -m pip install --upgrade pip
+sudo python3 -m pip install wheel
+sudo python3 -m pip install flask gunicorn
+echo "Installations complete!"
+
+echo "Now on to creating our virtual environment"
 mkdir ~/venvs
-python3 -m venv venvs/flask1804
-source ~/venvs/flask1804/bin/activate
-pip install --upgrade pip
-pip install wheel
-pip install flask gunicorn
+python3 -m venv venvs/SmartMirrorBackendEnv
+echo "Virtual environment setup complete!"
 
-# cd /mnt/c/Users/Daniel\ Couturier/Documents/Projects/Smart_Mirror_Backend
-
-bash run.sh
+echo "Now run the app."
+cd ~/Smart_Mirror_Backend/scripts
+. run.sh

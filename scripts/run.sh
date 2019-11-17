@@ -1,13 +1,18 @@
-# cd ~/
-source ~/venvs/flask1804/bin/activate
-# cd /mnt/c/Users/Daniel\ Couturier/Documents/Projects
-# Flask - Preprod / Dev
-# cd Smart_Mirror_Backend
+echo "Activating the virtual environment."
+# On this version of linux, "source" is not recognized when
+# running a shell script. "." is an alternate to "source".
+. ~/venvs/SmartMirrorBackendEnv/bin/activate
 
+# ============ Flask - Preprod / Dev ==========================
+echo "Starting Pre-Prod instance."
 # inside /scripts folder, so need to drop back one directory
 cd ..
 FLASK_APP=app.py flask run
-#Gunicorn - Prod
+# =============================================================
+
+# ============ Gunicorn - Prod ================================
+# echo "Starting Prod instance."
 # inside /scripts folder, so need to drop back two directories
 # cd ../..
 # gunicorn Smart_Mirror_Backend.app:app
+# =============================================================
