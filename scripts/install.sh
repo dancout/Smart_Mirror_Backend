@@ -13,6 +13,10 @@ sudo python3 -m pip install wheel
 sudo python3 -m pip install flask gunicorn
 echo "Installations complete!"
 
+echo "Now we will add an autostart feature at boot"
+cd ~/Smart_Mirror_Backend/scripts
+. autostart.sh
+
 echo "Now on to creating our virtual environment"
 mkdir ~/venvs
 python3 -m venv venvs/SmartMirrorBackendEnv

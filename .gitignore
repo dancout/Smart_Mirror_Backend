@@ -2,3 +2,4 @@
 app.pyc
 *.pyc
 .env
+.vscode/settings.json

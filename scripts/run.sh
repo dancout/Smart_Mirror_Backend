@@ -1,7 +1,8 @@
+# ============ Activating Virtual Environment ==========================
 echo "Activating the virtual environment."
-# On this version of linux, "source" is not recognized when
-# running a shell script. "." is an alternate to "source".
-. ~/venvs/SmartMirrorBackendEnv/bin/activate
+source ~/venvs/SmartMirrorBackendEnv/bin/activate
+# The following functions assume you're inside the /scripts folder
+cd ~/Smart_Mirror_Backend/scripts
 
 # ============ Flask - Preprod / Dev ==========================
 echo "Starting Pre-Prod instance."
